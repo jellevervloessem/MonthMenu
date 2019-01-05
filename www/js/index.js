@@ -15,6 +15,15 @@
  * KIND, either express or implied.  See the License for the
  * specific language governing permissions and limitations
  * under the License.
+ * 
+ * 
+ * TODO:
+ * - add multiple forms on the same page 
+ * - add helper classes
+ * -- ingredient
+ * -- recipe
+ * -- MonthMenu
+ * 
  */
 (function () {
     "use strict";
@@ -192,13 +201,17 @@
         // Wire up the UI Event Handler for the Add Item
         $('#add-item').submit(addItemHandler);
         $('#refresh').on('click', refreshDisplay(true, null));
+
+        $('#add-ingredient').submit(addIngredientHandler);
+        $('#add-recipe').submit(addRecipeHanler);
+        $('#add-menu').submit(addMenuHandler);
     }
 
     /**
      * Refresh the display with items from the table.
      * If offline sync is enabled, the local table will be synchronized
      * with the server table before displaying the todo items.
-     */
+     *
     
     function refreshDisplay(isSyncAllTables, syncTable) {
         updateSummaryMessage('Loading Data from Azure');
@@ -223,12 +236,13 @@
             }
         }
     }
+    */
 
     /**
      * Synchronize local table with the table on the server.
      * We do this by pushing local changes to the server and then
      * pulling the latest changes from the server.
-     */
+     *
     function syncLocalTable(syncTable) {
         return syncContext
             .push()
@@ -237,10 +251,11 @@
                 return syncContext.pull(new WindowsAzure.Query(syncTable));
             });
     }
+    */
 
     /**
      * Displays the todo items
-     */
+     *
     function displayItems(syncTable) {
         // Replace code to display table specific content
         // 
@@ -254,6 +269,7 @@
             .read() // Read the results
             .then(createTodoItemList, handleError); ////////////// TODO createxxxitemlist
     }
+    */
 
     /**
      * Updates the Summary Message

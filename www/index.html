@@ -24,19 +24,39 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="viewport" content="width=device-width, user-scalable=no" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Todo list: MonthMenu</title>
+        <title>MonthMenu Manager</title>
     </head>
     <body>
         <div id='wrapper'>
             <article>
                 <header>
-                    <h2>Month Menu</h2>
+                    <h2>Create ingredients</h2>
+                    <form id='add-ingredient'>
+                        <button type='button' id='refresh-ingredients'>Refresh</button>
+                        <button type='submit'>Add</button>
+                        <div><input type='text' id='new-ingredient-text' placeholder='Enter new Ingredient' /></div>
+                    </form>
+                    
+                    <h2>Create Recipes</h2>
+                    <form id='add-recipe'>
+                        <button type='button' id='refresh-recipes'>Refresh</button>
+                    <button type='submit'>Add</button>
+                    <div><input type='text' id='new-recipes-text' placeholder='Enter new recipe' /></div>
+                    </form>
 
+                    <h2>Create Month Menu</h2>
+                    <form id='add-menu'>
+                        <button type='button' id='refresh-menus'>Refresh</button>
+                        <button type='submit'>Add</button>
+                        <div><input type='text' id='new-menu-text' placeholder='Enter new menu' /></div>
+                    </form>
+                    <!--
                     <form id='add-item'>
                         <button type='button' id='refresh'>Refresh</button>
                         <button type='submit'>Add</button>
                         <div><input type='text' id='new-item-text' placeholder='Enter new task' /></div>
                     </form>
+                    -->
                 </header>
 
                 <ul id='todo-items'></ul>
